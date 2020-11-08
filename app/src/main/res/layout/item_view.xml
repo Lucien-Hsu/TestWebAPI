@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_mag"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/magnitude_circle"
+        android:gravity="center"
+        android:text="1.2"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_locationDistance"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="TextView"
+        android:textColor="#ACACAC"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_mag"
+        app:layout_constraintTop_toTopOf="@+id/tv_mag"
+        tools:text="30km S of" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="TextView"
+        android:textColor="#232323"
+        app:layout_constraintEnd_toEndOf="@+id/tv_locationDistance"
+        app:layout_constraintStart_toStartOf="@+id/tv_locationDistance"
+        app:layout_constraintTop_toBottomOf="@+id/tv_locationDistance"
+        tools:text="location" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+
+        android:textColor="#006D9F"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_locationDistance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_locationDistance"
+        app:layout_constraintTop_toTopOf="@+id/tv_locationDistance" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#00C0D8"
+        app:layout_constraintEnd_toEndOf="@+id/tv_date"
+        app:layout_constraintStart_toStartOf="@+id/tv_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
