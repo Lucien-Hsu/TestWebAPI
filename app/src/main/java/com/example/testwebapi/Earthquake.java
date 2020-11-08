@@ -1,15 +1,28 @@
 package com.example.testwebapi;
 
 public class Earthquake {
-    double magnitude;
-    String location;
-    long unixTime;
+    private double magnitude;
+    private String location;
+    private long unixTime;
+    private String mUrl;
 
-
-    Earthquake(double magnitude, String location, long unixTime) {
+    Earthquake(double magnitude, String location, long unixTime, String url) {
         this.magnitude = magnitude;
         this.location = location;
         this.unixTime = unixTime;
+        this.mUrl = url;
+    }
+
+    public void setUnixTime(long unixTime) {
+        this.unixTime = unixTime;
+    }
+
+    public String getUrl() {
+        return mUrl;
+    }
+
+    public void setmUrl(String mUrl) {
+        this.mUrl = mUrl;
     }
 
     public double getMagnitude() {
