@@ -15,13 +15,14 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class MyAdapter extends BaseAdapter {
     private Context context;
-    private ArrayList<Earthquake> dataList;
+    private List<Earthquake> dataList;
     private LayoutInflater inflater;
 
-    public MyAdapter(Context context, ArrayList<Earthquake> dataList) {
+    public MyAdapter(Context context, List<Earthquake> dataList) {
         this.context = context;
         inflater = inflater.from(context);
         this.dataList = dataList;
